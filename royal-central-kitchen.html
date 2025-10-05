@@ -3,130 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Royal Central Kitchen – Al Zahir Palace</title>
+  <title>Royal Central Kitchen — Project Details</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .project-header {
-      background: linear-gradient(135deg, #002855, #00509e);
-      color: #fff;
+    body { background: #f5f7fa; }
+    .banner {
+      background: linear-gradient(to right, #003366, #0066cc);
+      color: white;
+      padding: 40px 0;
       text-align: center;
-      padding: 60px 20px;
     }
-    .project-header h1 {
-      margin-bottom: 10px;
-    }
-    .section {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-    .overview {
-      background: #fff;
-      border-radius: 10px;
-      padding: 25px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      margin-bottom: 40px;
-    }
-    .image-grid {
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
     }
-    .image-card {
-      background: #fff;
+    .img-box {
+      background: white;
       border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
-      transition: transform 0.3s ease;
+      padding: 10px;
     }
-    .image-card:hover {
-      transform: translateY(-5px);
-    }
-    .image-card img {
+    .img-box img {
       width: 100%;
-      height: 220px;
-      object-fit: cover;
+      border-radius: 10px;
     }
-    .image-card h3 {
-      color: #002855;
-      margin: 15px 0 5px;
-    }
-    .image-card p {
-      color: #444;
-      font-size: 0.9em;
-      padding: 0 10px 15px;
-    }
-    .back-btn {
-      display: block;
-      text-align: center;
-      margin-top: 40px;
-    }
-    .back-btn a {
-      background: #004e92;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .back-btn a:hover {
-      background: #0073e6;
+    .img-box h3 {
+      color: #003366;
+      margin: 10px 0 5px;
     }
   </style>
 </head>
-
 <body>
-  <header class="project-header">
+
+  <div class="banner">
     <h1>Royal Central Kitchen – Al Zahir Palace</h1>
     <p>HVAC Design, Coordination & As-Built Documentation</p>
-  </header>
+  </div>
 
-  <section class="section">
-    <div class="overview">
-      <h2>Project Overview</h2>
-      <p>
-        The Royal Central Kitchen at Al Zahir Palace involved the HVAC design and coordination of a high-end restaurant facility.
-        Work included duct routing, air handling units, chilled water piping, and mechanical room layout.  
-        Below are the key system drawings and visualizations from the project.
-      </p>
+  <div class="gallery">
+    <div class="img-box">
+      <img src="ground-floor.png" alt="Ground Floor">
+      <h3>Ground Floor Plan</h3>
+      <p>HVAC duct layout and equipment arrangement.</p>
     </div>
-
-    <div class="image-grid">
-      <div class="image-card">
-        <img src="ground-floor.png" alt="Ground Floor Plan">
-        <h3>Ground Floor Plan</h3>
-        <p>HVAC layout showing duct routing and equipment placement for the ground level.</p>
-      </div>
-
-      <div class="image-card">
-        <img src="First Floor.png" alt="First Floor Plan">
-        <h3>First Floor Plan</h3>
-        <p>Detailed duct distribution and coordination with architectural elements.</p>
-      </div>
-
-      <div class="image-card">
-        <img src="roof-composite.png" alt="Roof Composite">
-        <h3>Roof Composite</h3>
-        <p>Combined layout for all rooftop mechanical systems and piping.</p>
-      </div>
-
-      <div class="image-card">
-        <img src="outdoor-units.png" alt="Outdoor Units">
-        <h3>Outdoor Units</h3>
-        <p>Placement of condensing units and outdoor HVAC components.</p>
-      </div>
-
-      <div class="image-card">
-        <img src="roof-ahus-package.png" alt="Roof AHUs">
-        <h3>Roof AHUs Package</h3>
-        <p>AHUs layout and coordination with rooftop duct systems and structure.</p>
-      </div>
+    <div class="img-box">
+      <img src="first-floor.png" alt="First Floor">
+      <h3>First Floor Plan</h3>
+      <p>Coordination between HVAC ducts and architecture.</p>
     </div>
-
-    <div class="back-btn">
-      <a href="index.html">← Back to Home</a>
+    <div class="img-box">
+      <img src="roof.png" alt="Roof Composite">
+      <h3>Roof Composite</h3>
+      <p>Outdoor units and rooftop mechanical layout.</p>
     </div>
-  </section>
+    <div class="img-box">
+      <img src="hvac-3d-1.png" alt="3D View">
+      <h3>3D Model View</h3>
+      <p>3D visualization of full HVAC system design.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="index.html" class="btn">Back to Portfolio</a>
+  </footer>
+
 </body>
 </html>
