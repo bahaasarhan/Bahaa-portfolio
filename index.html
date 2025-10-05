@@ -1,88 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bahaa Mohammed Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bahaa Mohammed | Mechanical Engineer</title>
   <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #eef3fa;
+      margin: 0;
+      color: #222;
+    }
+
     header {
       background: linear-gradient(135deg, #002855, #00509e);
-      color: #fff;
+      color: white;
       text-align: center;
-      padding: 70px 20px;
+      padding: 70px 20px 50px;
     }
-    header h1 { font-size: 2.2em; margin-bottom: 10px; }
-    header p { margin-bottom: 20px; }
-    .cv-btn {
-      background: #00aaff;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: 0.3s;
+
+    header h1 {
+      font-size: 2em;
+      margin: 0;
     }
-    .cv-btn:hover { background: #007acc; }
+
+    header p {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
 
     .section {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 40px auto;
-      padding: 20px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
       padding: 25px;
-      margin-bottom: 30px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
     }
-    .skills span {
-      display: inline-block;
-      background: #004e92;
-      color: #fff;
-      padding: 5px 12px;
-      border-radius: 25px;
-      margin: 5px;
-      font-size: 0.9em;
+
+    h2 {
+      color: #004e92;
+      border-left: 4px solid #004e92;
+      padding-left: 10px;
+      font-size: 1.3em;
     }
-    .project-card {
+
+    .skills {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
+      gap: 10px;
+      margin-top: 10px;
     }
+
+    .skill {
+      background: #004e92;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9em;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
     .project-card img {
       width: 100%;
-      max-width: 400px;
+      height: 200px;
       object-fit: cover;
     }
+
     .project-info {
-      flex: 1;
-      padding: 20px;
+      padding: 15px;
     }
+
     .project-info h3 {
+      margin: 0 0 8px;
       color: #002855;
-      margin-bottom: 10px;
     }
+
     .project-info p {
-      color: #333;
-      font-size: 0.95em;
-      margin-bottom: 10px;
+      font-size: 0.9em;
+      color: #444;
     }
+
     .btn {
       display: inline-block;
       background: #004e92;
       color: #fff;
-      padding: 8px 16px;
-      border-radius: 5px;
+      padding: 10px 20px;
+      border-radius: 8px;
       text-decoration: none;
       transition: 0.3s;
+      margin-top: 10px;
     }
-    .btn:hover { background: #0073e6; }
+
+    .btn:hover {
+      background: #003670;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #002855;
+      color: #fff;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #76c7ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .contact {
+      margin-top: 20px;
+      font-size: 0.95em;
+    }
   </style>
 </head>
 
@@ -91,38 +143,53 @@
     <h1>Bahaa Mohammed</h1>
     <p>Mechanical Design & BIM Engineer</p>
     <p>Riyadh, Saudi Arabia</p>
-    <a href="cv.html" class="cv-btn">View Full CV</a>
   </header>
 
-  <section class="section card">
+  <section class="section">
     <h2>About Me</h2>
-    <p>I am a Mechanical Engineer specialized in HVAC, Firefighting, and Plumbing systems with expertise in BIM coordination and detailed design. I deliver efficient and high-quality engineering solutions using modern BIM workflows.</p>
+    <p>
+      I am a Mechanical Engineer specialized in HVAC, Firefighting, and Plumbing systems,
+      with expertise in BIM coordination and detailed MEP design for large-scale projects.
+      I aim to deliver efficient, coordinated, and high-quality engineering solutions using modern BIM workflows.
+    </p>
   </section>
 
-  <section class="section card">
+  <section class="section">
     <h2>Technical Skills</h2>
     <div class="skills">
-      <span>HVAC Design & Analysis</span>
-      <span>Firefighting & Plumbing Systems</span>
-      <span>BIM Coordination (Revit, Navisworks)</span>
-      <span>AutoCAD, Revit MEP</span>
-      <span>Dynamo & Clash Detection</span>
-      <span>BOQ & Technical Shop Drawings</span>
+      <span class="skill">HVAC Systems Design & Analysis</span>
+      <span class="skill">Firefighting & Plumbing Systems</span>
+      <span class="skill">BIM Coordination (Revit, Navisworks)</span>
+      <span class="skill">AutoCAD, Revit MEP</span>
+      <span class="skill">Dynamo Automation</span>
+      <span class="skill">BOQ & Shop Drawings</span>
     </div>
   </section>
 
-  <section class="section card">
+  <section class="section">
     <h2>Projects</h2>
-
-    <div class="project-card">
-      <img src="royal-thumb.png" alt="Royal Central Kitchen">
-      <div class="project-info">
-        <h3>Royal Central Kitchen – Al Zahir Palace</h3>
-        <p><strong>Location:</strong> Jeddah, Saudi Arabia</p>
-        <p><strong>Scope:</strong> HVAC Design, Coordination & As-Built Documentation</p>
-        <a href="royal-central-kitchen.html" class="btn">View Project Details</a>
+    <div class="projects">
+      <div class="project-card">
+        <img src="royal-thumb.png" alt="Royal Central Kitchen" />
+        <div class="project-info">
+          <h3>Royal Central Kitchen – Al Zahir Palace</h3>
+          <p>HVAC Design, Coordination & As-Built Documentation</p>
+          <a href="royal-central-kitchen.html" class="btn">View Project Details</a>
+        </div>
       </div>
     </div>
   </section>
+
+  <footer>
+    <div class="contact">
+      <p>Email: <a href="mailto:bahaamohammed041@gmail.com">bahaamohammed041@gmail.com</a></p>
+      <p>Phone: +966 55 123 4567</p>
+      <p>
+        <a href="https://www.linkedin.com/in/bahaa-mohammed/" target="_blank">LinkedIn Profile</a> |
+        <a href="cv.html">View CV</a>
+      </p>
+    </div>
+    <p>&copy; 2025 Bahaa Mohammed — All Rights Reserved</p>
+  </footer>
 </body>
 </html>
