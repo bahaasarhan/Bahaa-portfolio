@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bahaa Mohamed Sarhan | Mechanical & BIM Engineer</title>
+<style>
+:root{
+  --bg:#f8fafc;--text:#1e293b;--accent:#0284c7;--muted:#475569;--white:#fff;
+}
+body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);}
+header{background:var(--accent);color:var(--white);padding:20px 0;text-align:center;}
+.container{max-width:1100px;margin:auto;padding:20px;}
+section{margin:30px 0;}
+h1,h2{text-align:center;}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
+.project{background:var(--white);border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.05);overflow:hidden;transition:transform .3s;}
+.project:hover{transform:translateY(-5px);}
+.project img{width:100%;height:200px;object-fit:cover;}
+.project-content{padding:15px;}
+.project-content h3{margin:0;font-size:1.1em;}
+.project-content p{margin:8px 0;color:var(--muted);}
+.btn{display:inline-block;padding:10px 16px;background:var(--accent);color:#fff;text-decoration:none;border-radius:8px;}
+footer{text-align:center;padding:15px;color:var(--muted);font-size:.9em;}
+.lang{position:fixed;top:15px;right:15px;padding:5px 10px;border-radius:6px;}
+</style>
+</head>
+<body>
+<header>
+  <h1 id="name">Bahaa Mohamed Sarhan</h1>
+  <p id="role">Mechanical Design & BIM Engineer</p>
+</header>
+
+<div class="container">
+  <section id="about">
+    <h2 id="aboutTitle">About Me</h2>
+    <p id="aboutText">Mechanical Engineer specialized in MEP design and BIM coordination, experienced in HVAC, Fire Fighting, and Plumbing systems. Skilled in Revit, Navisworks, and clash detection with focus on delivering efficient, buildable engineering solutions.</p>
+  </section>
+
+  <section id="projects">
+    <h2 id="projTitle">Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="royal-thumb.png" alt="Royal Central Kitchen">
+        <div class="project-content">
+          <h3 id="projName">Royal Central Kitchen – HVAC (Jeddah)</h3>
+          <p id="projDesc">HVAC design, coordination, and as-built drawings for a large-scale central kitchen facility.</p>
+          <a href="royal-central-kitchen.html" class="btn" id="viewDetails">View Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 id="contactTitle">Contact</h2>
+    <p>Email: <a href="mailto:Bahaamohamed041@gmail.com">Bahaamohamed041@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/bahaa-mohammed/" target="_blank">bahaa-mohammed</a></p>
+    <p>Phone: +966 54 624 4504</p>
+  </section>
+</div>
+
+<footer>© 2025 Bahaa Mohamed Sarhan — Riyadh, Saudi Arabia</footer>
+<select id="lang" class="lang">
+<option value="en">English</option>
+<option value="ar">العربية</option>
+</select>
+
+<script>
+const content = {
+  en:{name:"Bahaa Mohamed Sarhan",role:"Mechanical Design & BIM Engineer",aboutTitle:"About Me",aboutText:"Mechanical Engineer specialized in MEP design and BIM coordination, experienced in HVAC, Fire Fighting, and Plumbing systems. Skilled in Revit, Navisworks, and clash detection with focus on delivering efficient, buildable engineering solutions.",projTitle:"Projects",projName:"Royal Central Kitchen – HVAC (Jeddah)",projDesc:"HVAC design, coordination, and as-built drawings for a large-scale central kitchen facility.",viewDetails:"View Details",contactTitle:"Contact"},
+  ar:{name:"بهاء محمد سرحان",role:"مهندس تصميم ميكانيكي وBIM",aboutTitle:"نبذة عني",aboutText:"مهندس ميكانيكا متخصص في تصميم أنظمة MEP وتنسيق نماذج الـBIM، بخبرة في أنظمة التكييف ومكافحة الحريق والسباكة. ماهر في Revit وNavisworks وكشف التعارضات مع التركيز على تقديم حلول هندسية فعالة وقابلة للتنفيذ.",projTitle:"المشاريع",projName:"المطبخ المركزي - جدة (أنظمة التكييف)",projDesc:"تصميم وتنسيق ورسومات As-Built لأنظمة التكييف في مشروع المطبخ المركزي.",viewDetails:"عرض التفاصيل",contactTitle:"تواصل معي"}
+};
+document.getElementById("lang").addEventListener("change",e=>{const l=e.target.value;const d=content[l];for(let k in d){document.getElementById(k).textContent=d[k]}document.body.dir=l==="ar"?"rtl":"ltr";});
+</script>
+</body>
+</html>

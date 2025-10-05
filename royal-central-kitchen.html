@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Central Kitchen – HVAC | Bahaa Mohamed Sarhan</title>
+<style>
+body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#f8fafc;color:#1e293b;}
+header{background:#0284c7;color:#fff;padding:20px;text-align:center;}
+.container{max-width:1100px;margin:auto;padding:20px;}
+.tabs{display:flex;gap:10px;justify-content:center;margin:20px 0;}
+.tab{padding:8px 14px;border-radius:6px;background:#e2e8f0;color:#475569;cursor:pointer;}
+.tab.active{background:#0284c7;color:#fff;}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:15px;}
+.gallery img{width:100%;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+h2{text-align:center;margin-top:10px;}
+.back{text-decoration:none;color:#0284c7;}
+footer{text-align:center;margin:30px;color:#475569;}
+.lang{position:fixed;top:15px;right:15px;padding:5px 10px;border-radius:6px;}
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Royal Central Kitchen – HVAC (Jeddah)</h1>
+  <p id="subtitle">HVAC Design, Coordination & As-Built</p>
+</header>
+
+<div class="container">
+  <div class="tabs">
+    <div class="tab active" data-section="hvac">HVAC</div>
+    <div class="tab" data-section="fire">Firefighting</div>
+    <div class="tab" data-section="plumb">Plumbing</div>
+    <div class="tab" data-section="bim">BIM</div>
+  </div>
+
+  <div id="hvac" class="gallery-section">
+    <h2 id="hvacTitle">HVAC Drawings</h2>
+    <div class="gallery">
+      <img src="ground-floor.png" alt="Ground Floor">
+      <img src="First Floor.png" alt="First Floor">
+      <img src="roof-composite.png" alt="Roof Composite">
+      <img src="roof-ahus-package.png" alt="Roof AHUs">
+      <img src="roof-hoods.png" alt="Roof Hoods">
+      <img src="outdoor-units.png" alt="Outdoor Units">
+      <img src="hvac-3d-1.png" alt="HVAC 3D View 1">
+      <img src="hvac-3d-2.png" alt="HVAC 3D View 2">
+      <img src="hvac-3d-3.png" alt="HVAC 3D View 3">
+    </div>
+  </div>
+
+  <div id="fire" class="gallery-section" style="display:none;">
+    <h2>Firefighting Drawings</h2>
+    <p>No drawings added yet.</p>
+  </div>
+
+  <div id="plumb" class="gallery-section" style="display:none;">
+    <h2>Plumbing Drawings</h2>
+    <p>No drawings added yet.</p>
+  </div>
+
+  <div id="bim" class="gallery-section" style="display:none;">
+    <h2>BIM Coordination</h2>
+    <p>Clash detection and BIM coordination visuals will be added later.</p>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html" class="back">← Back to Portfolio</a><br>
+  © 2025 Bahaa Mohamed Sarhan
+</footer>
+
+<select id="lang" class="lang">
+<option value="en">English</option>
+<option value="ar">العربية</option>
+</select>
+
+<script>
+const content={en:{title:"Royal Central Kitchen – HVAC (Jeddah)",subtitle:"HVAC Design, Coordination & As-Built",hvacTitle:"HVAC Drawings"},ar:{title:"المطبخ المركزي - جدة",subtitle:"تصميم وتنسيق ورسومات As-Built لأنظمة التكييف",hvacTitle:"رسومات أنظمة التكييف"}};
+document.getElementById("lang").addEventListener("change",e=>{const l=e.target.value;const d=content[l];document.getElementById("title").textContent=d.title;document.getElementById("subtitle").textContent=d.subtitle;document.getElementById("hvacTitle").textContent=d.hvacTitle;document.body.dir=l==="ar"?"rtl":"ltr";});
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{document.querySelectorAll(".tab").forEach(b=>b.classList.remove("active"));t.classList.add("active");document.querySelectorAll(".gallery-section").forEach(s=>s.style.display="none");document.getElementById(t.dataset.section).style.display="block";}));
+</script>
+</body>
+</html>
