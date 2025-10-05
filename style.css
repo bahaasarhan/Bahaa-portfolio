@@ -1,0 +1,9 @@
+/* Modern blue-gray style for portfolio */
+:root{--bg:#f5f7fb;--card:#fff;--text:#0f1724;--muted:#6b7280;--accent:#0ea5a4;--accent2:#2563eb}
+body{font-family:Poppins,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:0}
+.container{max-width:1100px;margin:28px auto;padding:20px}
+.header{background:linear-gradient(90deg,var(--accent2),var(--accent));color:#fff;padding:30px}
+.section{background:var(--card);padding:18px;border-radius:10px;margin-top:16px;box-shadow:0 8px 24px rgba(2,6,23,0.06)}
+.footer{background:#0f1724;color:var(--accent);text-align:center;padding:16px;margin-top:18px}
+a{color:var(--accent);text-decoration:none}
+@media(max-width:720px){.container{padding:12px}}
