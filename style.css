@@ -1,120 +1,105 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
 body {
-  background: linear-gradient(180deg, #0a192f, #112240);
-  color: #e6f1ff;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
 }
 
-header {
-  text-align: center;
-  padding: 80px 20px 40px;
-  background: rgba(255, 255, 255, 0.05);
+.header {
+  background: linear-gradient(to right, #003366, #0066cc);
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  color: #64ffda;
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-header h2 {
-  font-size: 1.2rem;
-  color: #ccd6f6;
-  margin-bottom: 20px;
+.profile-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
 
-.buttons {
-  margin-top: 10px;
+h1 {
+  margin: 0;
+  font-size: 1.8em;
 }
 
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 5px;
+  background: #0066cc;
+  color: white;
+  padding: 8px 16px;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn.linkedin {
-  background-color: #0a66c2;
-  color: #fff;
-}
-
-.btn.cv {
-  background-color: #007bff;
-  color: #fff;
-}
-
-.btn.view {
-  background-color: #64ffda;
-  color: #0a192f;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  opacity: 0.85;
-  transform: translateY(-2px);
+  background: #004c99;
 }
 
-section {
-  padding: 60px 20px;
+.linkedin {
+  background: #0a66c2;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
-h3 {
-  font-size: 1.8rem;
-  color: #64ffda;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.project-card {
-  background: rgba(255, 255, 255, 0.05);
+.card {
+  background: white;
   border-radius: 12px;
   padding: 20px;
-  margin: 20px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+.skills-tags {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-tags span {
+  background: #e7f1ff;
+  color: #004c99;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.9em;
+}
+
+.project {
+  display: flex;
   align-items: center;
-  text-align: center;
-  transition: all 0.3s ease;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.project-card:hover {
-  transform: scale(1.02);
-  background: rgba(100, 255, 218, 0.05);
+.project-thumb {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.project-card img {
-  width: 100%;
-  max-width: 700px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.project-info h4 {
-  font-size: 1.3rem;
-  color: #e6f1ff;
-}
-
-.project-info p {
-  color: #8892b0;
-  margin: 5px 0;
+.btn.small {
+  font-size: 0.9em;
+  padding: 6px 12px;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  color: #8892b0;
-  font-size: 0.9rem;
+  padding: 15px;
+  color: #666;
+  font-size: 0.9em;
 }
