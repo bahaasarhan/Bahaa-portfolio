@@ -3,233 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bahaa Mohammed | Mechanical Design & BIM Engineer</title>
+  <title>Bahaa Mohammed — Portfolio</title>
   <style>
-    * {
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fc;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
+      color: #222;
     }
-
-    body {
-      background: #f4f8fb;
-      color: #333;
-      line-height: 1.6;
-    }
-
     header {
-      background: linear-gradient(135deg, #004e92, #000428);
-      color: #fff;
+      background: linear-gradient(90deg, #003366, #006699);
+      color: white;
       text-align: center;
-      padding: 60px 20px 80px;
-      position: relative;
+      padding: 40px 20px 20px;
     }
-
     header img {
-      width: 130px;
-      height: 130px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #64ffda;
-      margin-bottom: 15px;
+      border: 3px solid white;
     }
-
     header h1 {
-      font-size: 2.4rem;
-      margin-bottom: 8px;
+      margin: 10px 0 0;
+      font-size: 26px;
     }
-
     header h2 {
-      font-size: 1.2rem;
-      color: #a8d0e6;
-      margin-bottom: 5px;
+      font-size: 15px;
+      margin: 5px 0 20px;
+      font-weight: 400;
     }
-
-    .contact-info {
-      font-size: 0.95rem;
-      color: #dbe8ff;
-      margin-bottom: 15px;
-    }
-
-    .buttons {
+    header .btns {
       margin-top: 10px;
     }
-
-    .btn {
+    header .btn {
       display: inline-block;
-      padding: 10px 22px;
       margin: 5px;
-      border-radius: 8px;
+      padding: 8px 16px;
+      background-color: #009688;
+      color: white;
       text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: 0.3s;
     }
-
-    .btn.linkedin {
-      background-color: #0a66c2;
-      color: #fff;
+    header .btn:hover {
+      background-color: #00796b;
     }
-
-    .btn.cv {
-      background-color: #64ffda;
-      color: #00334e;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-      transform: translateY(-2px);
-    }
-
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
       padding: 0 20px;
     }
-
-    h3 {
-      font-size: 1.8rem;
-      color: #004e92;
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       margin-bottom: 20px;
-      text-align: center;
+      padding: 20px;
     }
-
-    .about p {
-      color: #444;
-      text-align: center;
-      font-size: 1rem;
-      margin-bottom: 40px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+    h3 {
+      margin-top: 0;
+      color: #003366;
     }
-
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill {
+      background-color: #e7f3ff;
+      color: #003366;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+    }
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
     }
-
     .project-card {
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       padding: 15px;
-      text-align: center;
-      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: 0.3s;
     }
-
     .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-
-    .project-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
     .project-card h4 {
-      color: #004e92;
-      font-size: 1.1rem;
-      margin-bottom: 5px;
+      margin: 0 0 5px;
+      color: #003366;
     }
-
     .project-card p {
-      color: #666;
-      font-size: 0.9rem;
-      margin-bottom: 10px;
+      font-size: 13px;
+      color: #444;
     }
-
-    .btn.view {
-      background-color: #004e92;
-      color: #fff;
-      font-size: 0.9rem;
-      padding: 8px 16px;
-      border-radius: 6px;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s ease;
-    }
-
-    .btn.view:hover {
-      background-color: #002f61;
-    }
-
     footer {
       text-align: center;
-      padding: 25px;
-      font-size: 0.9rem;
+      padding: 20px;
       color: #555;
-      background: #e8eef5;
-      margin-top: 50px;
+      font-size: 14px;
     }
-
-    footer a {
-      color: #004e92;
+    a.email, a.linkedin {
+      color: #006699;
       text-decoration: none;
     }
-
-    footer a:hover {
+    a.email:hover, a.linkedin:hover {
       text-decoration: underline;
     }
   </style>
 </head>
-
 <body>
   <header>
-    <img src="profile.jpg" alt="Bahaa Mohammed Photo" />
+    <img src="profile.jpg" alt="Profile Photo" />
     <h1>Bahaa Mohammed</h1>
-    <h2>Mechanical Design & BIM Engineer</h2>
-    <div class="contact-info">
-      <p>📧 bahaamohammed041@gmail.com | 📍 Riyadh, Saudi Arabia</p>
-      <p>📞 +966 55 123 4567</p>
-    </div>
-    <div class="buttons">
-      <a href="https://www.linkedin.com/in/bahaa-mohammed/" target="_blank" class="btn linkedin">LinkedIn</a>
-      <a href="cv.pdf" target="_blank" class="btn cv">View CV</a>
+    <h2>Mechanical Design & BIM Engineer<br>Riyadh, Saudi Arabia</h2>
+    <div class="btns">
+      <a href="cv.pdf" class="btn" target="_blank">View CV</a>
+      <a href="https://www.linkedin.com/in/bahaa-mohammed/" class="btn" target="_blank">View LinkedIn Profile</a>
     </div>
   </header>
 
-  <section class="about">
-    <h3>About Me</h3>
-    <p>
-      I’m a Mechanical Engineer specialized in HVAC, Firefighting, and Plumbing systems design with a strong background
-      in BIM modeling and coordination. My focus is on delivering efficient, practical, and detailed MEP engineering
-      solutions with a passion for continuous improvement and innovation.
-    </p>
-  </section>
+  <div class="container">
 
-  <section>
-    <h3>Projects</h3>
-    <div class="projects">
-      <div class="project-card">
-        <img src="hvac-3d-1.png" alt="Royal Central Kitchen Thumbnail" />
-        <h4>Royal Central Kitchen</h4>
-        <p><strong>Location:</strong> Jeddah</p>
-        <p><strong>Role:</strong> HVAC Design & Coordination</p>
-        <a href="royal-central-kitchen.html" class="btn view">View Project Details</a>
-      </div>
+    <div class="card">
+      <h3>About</h3>
+      <p>
+        Mechanical Engineer specialized in MEP design with over 3 years of experience in designing, installing,
+        and maintaining HVAC, fire fighting, and plumbing systems. Experienced in BIM coordination, modeling (LOD 300–500),
+        clash detection and Revit family creation. Passionate about efficient, buildable engineering solutions using modern BIM workflows.
+      </p>
+    </div>
 
-      <div class="project-card">
-        <h4>Firefighting Network Upgrade</h4>
-        <p><strong>Role:</strong> Design & BIM Coordination</p>
-        <p>Details coming soon...</p>
-      </div>
-
-      <div class="project-card">
-        <h4>Plumbing System Enhancement</h4>
-        <p><strong>Role:</strong> Revit Modeling & Clash Detection</p>
-        <p>Details coming soon...</p>
+    <div class="card">
+      <h3>Skills</h3>
+      <div class="skills">
+        <span class="skill">HVAC Systems Design & Analysis</span>
+        <span class="skill">Fire Fighting & Plumbing Systems</span>
+        <span class="skill">BIM Coordination (Revit, Navisworks)</span>
+        <span class="skill">Clash Detection & Revit Families</span>
+        <span class="skill">Dynamo Automation (Python)</span>
+        <span class="skill">BOQ, Technical Specs & Shop Drawings</span>
+        <span class="skill">HAP (Carrier) & Energy Modeling</span>
+        <span class="skill">Autodesk Construction Cloud & ISO 19650</span>
       </div>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2025 Bahaa Mohammed | <a href="mailto:bahaamohammed041@gmail.com">Email Me</a></p>
-  </footer>
+    <div class="card">
+      <h3>Projects</h3>
+      <div class="projects">
+        <div class="project-card" onclick="window.open('royal-central-kitchen.html', '_blank')">
+          <h4>Central Kitchen – Al Zahir Palace</h4>
+          <p>Jeddah, Saudi Arabia | BIM & Design Engineer</p>
+          <p>HVAC, Firefighting & Plumbing modeling and coordination.</p>
+        </div>
+        <div class="project-card">
+          <h4>Commercial Mall</h4>
+          <p>Riyadh, Saudi Arabia | Mechanical Design Engineer</p>
+          <p>HVAC and plumbing systems design.</p>
+        </div>
+        <div class="project-card">
+          <h4>King Abdullah Logistics, Manufacturing & Technology Center (LMT)</h4>
+          <p>NEOM, Saudi Arabia | BIM Coordinator</p>
+          <p>MEP model coordination (Revit & Navisworks).</p>
+        </div>
+        <div class="project-card">
+          <h4>SAL Jeddah Airport</h4>
+          <p>Jeddah, Saudi Arabia | BIM Engineer</p>
+          <p>Shop drawings and MEP coordination.</p>
+        </div>
+        <div class="project-card">
+          <h4>Damanhur Hospital (Graduation Project)</h4>
+          <p>Damanhur, Egypt | HVAC Team Leader</p>
+          <p>Medical HVAC design using ASHRAE-170, chiller room design, and cooling load calculations.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Certificates</h3>
+      <p>
+        MEP-BIM Diploma — Kaitech Academy (includes Revit, Clash Detection, Navisworks, BIM 4D/5D/6D/7D, Dynamo, BIM Management).
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Contact</h3>
+      <p>
+        <strong>Email:</strong> <a class="email" href="mailto:bahaamohamed041@gmail.com">bahaamohamed041@gmail.com</a><br>
+        <strong>Phone:</strong> +966546244504<br>
+        <strong>LinkedIn:</strong> <a class="linkedin" href="https://www.linkedin.com/in/bahaa-mohammed/" target="_blank">Bahaa Mohammed</a>
+      </p>
+    </div>
+  </div>
+
+  <footer>© 2025 Bahaa Mohammed — All Rights Reserved</footer>
 </body>
 </html>
