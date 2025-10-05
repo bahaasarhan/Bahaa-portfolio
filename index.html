@@ -4,121 +4,149 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bahaa Mohammed | Mechanical & BIM Engineer</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #004e92, #000428);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .section h2 {
+      border-left: 5px solid #004e92;
+      padding-left: 10px;
+      color: #004e92;
+    }
+    .about, .skills, .projects, .contact {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skills li {
+      background: #004e92;
+      color: white;
+      display: inline-block;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 5px;
+      font-size: 0.9em;
+    }
+    .projects .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+      background: #fff;
+    }
+    .projects .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .projects img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    footer {
+      background: #000428;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #004e92;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    a.button:hover {
+      background: #006bd6;
+    }
+  </style>
 </head>
-
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-container">
-      <div class="header-info">
-        <h1>Bahaa Mohammed</h1>
-        <h3>Mechanical Design & BIM Engineer</h3>
-        <p>Riyadh, Saudi Arabia</p>
-        <div class="header-buttons">
-          <a href="cv.pdf" class="btn" target="_blank">Download CV</a>
-          <a href="https://www.linkedin.com/in/bahaa-mohamed-sarhan" class="btn" target="_blank">LinkedIn</a>
-          <a href="mailto:bahaamohamed041@gmail.com" class="btn">Contact</a>
-        </div>
-      </div>
-    </div>
+
+  <header>
+    <h1>Bahaa Mohammed</h1>
+    <p>Mechanical Design & BIM Engineer</p>
+    <a href="cv.pdf" class="button" download>Download CV</a>
   </header>
 
-  <main>
-    <!-- About -->
-    <section class="section about">
-      <h2>About</h2>
-      <p>
-        Mechanical Engineer specialized in MEP design with over 3 years of experience
-        in designing, installing, and maintaining HVAC, firefighting, and plumbing systems.
-        Experienced in BIM coordination, modeling (LOD 300–500), clash detection, and Revit family creation.
-        Passionate about efficient, buildable engineering solutions using modern BIM workflows.
-      </p>
-    </section>
+  <div class="section about">
+    <h2>About Me</h2>
+    <p>Mechanical Engineer specializing in design and BIM coordination with a strong background in HVAC systems, plumbing, and fire fighting design. Passionate about creating efficient and sustainable building systems.</p>
+  </div>
 
-    <!-- Skills -->
-    <section class="section skills">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <span>HVAC Systems Design & Analysis</span>
-        <span>Fire Fighting & Plumbing Systems</span>
-        <span>BIM Coordination (Revit, Navisworks)</span>
-        <span>Clash Detection & Revit Families</span>
-        <span>BIM Automation (Dynamo, Python)</span>
-        <span>BOQ, Technical Specs & Shop Drawings</span>
-        <span>HAP (Carrier) & Energy Modeling</span>
-        <span>Autodesk Construction Cloud & ISO 19650</span>
-      </div>
-    </section>
+  <div class="section skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HVAC Design</li>
+      <li>BIM Coordination</li>
+      <li>AutoCAD</li>
+      <li>Revit MEP</li>
+      <li>Navisworks</li>
+      <li>Fire Fighting Systems</li>
+      <li>Plumbing Design</li>
+    </ul>
+  </div>
 
-    <!-- Projects -->
-    <section class="section projects">
-      <h2>Projects</h2>
-      <div class="projects-grid">
+  <div class="section projects">
+    <h2>Projects</h2>
 
-        <!-- Project 1 -->
-        <div class="project-card">
-          <img src="royal-thumb.png" alt="Royal Central Kitchen Thumbnail" />
-          <h3>Royal Central Kitchen – Al Zahir Palace</h3>
-          <p>Jeddah, Saudi Arabia • BIM & Design Engineer</p>
-          <p>HVAC, Firefighting & Plumbing modeling and coordination</p>
-          <a href="royal-central-kitchen.html" class="btn">View Project Details</a>
-        </div>
+    <div class="card">
+      <img src="hvac-3d-1.png" alt="Royal Central Kitchen Project">
+      <h3>Royal Central Kitchen – Jeddah</h3>
+      <p>HVAC Design and BIM Coordination for a large central kitchen facility. Includes detailed design for AHUs, exhaust systems, and kitchen ventilation.</p>
+      <a href="royal-central-kitchen.html" class="button">View Project Details</a>
+    </div>
 
-        <!-- Project 2 -->
-        <div class="project-card">
-          <h3>Commercial Mall</h3>
-          <p>Riyadh, Saudi Arabia • Mechanical Design Engineer</p>
-          <p>HVAC and plumbing systems design</p>
-        </div>
+    <div class="card">
+      <h3>Future Projects Coming Soon...</h3>
+      <p>More mechanical and BIM projects will be added shortly.</p>
+    </div>
 
-        <!-- Project 3 -->
-        <div class="project-card">
-          <h3>King Abdullah Logistics, Manufacturing & Technology Center (LMT)</h3>
-          <p>NEOM, Saudi Arabia • BIM Coordinator</p>
-          <p>MEP model coordination (Revit & Navisworks)</p>
-        </div>
+  </div>
 
-        <!-- Project 4 -->
-        <div class="project-card">
-          <h3>SAL Jeddah Airport</h3>
-          <p>Jeddah, Saudi Arabia • BIM Engineer</p>
-          <p>Shop drawings and MEP coordination</p>
-        </div>
+  <div class="section contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:bahaamohamed041@gmail.com">bahaamohamed041@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bahaa-mohammed/" target="_blank">bahaa-mohammed</a></p>
+    <p><strong>Phone:</strong> +20 111 111 1111</p>
+  </div>
 
-        <!-- Project 5 -->
-        <div class="project-card">
-          <h3>Damanhur Hospital (Graduation Project)</h3>
-          <p>Damanhur, Egypt • HVAC Team Leader</p>
-          <p>Medical HVAC design using ASHRAE-170 and load calculations</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Certificates -->
-    <section class="section certificates">
-      <h2>Certificates</h2>
-      <ul>
-        <li>MEP-BIM Diploma — Kaitech Academy (includes Revit, Clash Detection, Navisworks, Dynamo, BIM Management)</li>
-        <li>Autodesk Certified Professional: Revit MEP Mechanical</li>
-        <li>HVAC Design and Drafting Diploma</li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section class="section contact">
-      <h2>Contact</h2>
-      <div class="contact-info">
-        <p>📧 <a href="mailto:bahaamohamed041@gmail.com">bahaamohamed041@gmail.com</a></p>
-        <p>📱 +966564624504</p>
-        <p>🔗 <a href="https://www.linkedin.com/in/bahaa-mohamed-sarhan" target="_blank">LinkedIn Profile</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© 2025 Bahaa Mohammed — Mechanical & BIM Engineer</p>
+  <footer>
+    <p>© 2025 Bahaa Mohammed | All Rights Reserved</p>
   </footer>
+
 </body>
 </html>
