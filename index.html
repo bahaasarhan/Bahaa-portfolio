@@ -1,169 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bahaa Mohammed — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f4f7fb;
-      color: #222;
-    }
-    header {
-      background: linear-gradient(90deg, #003366, #007acc);
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
-    header h1 { margin: 0; font-size: 2em; }
-    header p { margin: 5px 0; font-size: 1.1em; }
-    nav {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    nav a {
-      background-color: #007acc;
-      color: white;
-      text-decoration: none;
-      margin-left: 10px;
-      padding: 8px 14px;
-      border-radius: 5px;
-      font-size: 0.9em;
-      transition: 0.3s;
-    }
-    nav a:hover { background-color: #005f99; }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      border-radius: 10px;
-      padding: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    h2 { color: #003366; border-bottom: 2px solid #007acc; padding-bottom: 5px; }
-    .skills span {
-      background: #e6f2ff;
-      color: #004080;
-      padding: 6px 12px;
-      border-radius: 20px;
-      margin: 5px;
-      display: inline-block;
-      font-size: 0.9em;
-    }
-    .project {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #f8fbff;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
-    .project img {
-      width: 180px;
-      border-radius: 8px;
-    }
-    .project-info {
-      flex: 1;
-      margin-left: 20px;
-    }
-    .project a {
-      display: inline-block;
-      background: #007acc;
-      color: #fff;
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 5px;
-      margin-top: 10px;
-      transition: 0.3s;
-    }
-    .project a:hover { background: #005f99; }
-    footer {
-      text-align: center;
-      margin: 40px 0;
-      font-size: 0.9em;
-      color: #666;
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Bahaa Mohamed Sarhan — Portfolio</title>
+<style>
+:root{--bg:#f7f9fc;--card:#ffffff;--muted:#475569;--accent:#0ea5a4;--dark:#071023}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial, "Segoe UI", Tahoma, sans-serif;background:var(--bg);color:var(--dark)}
+.container{max-width:1000px;margin:28px auto;padding:20px}
+.header{display:flex;gap:16px;align-items:center;justify-content:space-between}
+.hero{display:flex;gap:18px;align-items:center}
+.avatar{width:120px;height:120px;border-radius:12px;overflow:hidden;flex:0 0 120px;border:4px solid white;box-shadow:0 6px 18px rgba(2,6,23,0.08)}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.title h1{margin:0;font-size:22px}
+.title p{margin:6px 0 0;color:var(--muted)}
+.buttons{display:flex;gap:8px}
+.btn{padding:10px 14px;border-radius:8px;text-decoration:none;background:var(--accent);color:white;font-weight:600;transition:0.3s}
+.btn:hover{background:#0c8e8b}
+.section{margin-top:20px;background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skill{background:#f1fcfb;padding:8px 10px;border-radius:8px;color:var(--muted);font-size:14px}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.project-card{padding:12px;background:#fff;border-radius:10px;box-shadow:0 6px 12px rgba(2,6,23,0.04)}
+.footer{text-align:center;color:var(--muted);margin-top:18px;font-size:13px}
+.lang-toggle{margin-right:8px}
+.top-right{display:flex;align-items:center;gap:8px}
+html[lang="ar"] body{direction:rtl}
+@media(max-width:720px){.header{flex-direction:column;align-items:flex-start}.avatar{width:96px;height:96px}}
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="https://www.linkedin.com/in/bahaa-mohammed/" target="_blank">LinkedIn</a>
-      <a href="cv.pdf" target="_blank">View CV</a>
-    </nav>
-    <h1>Bahaa Mohammed</h1>
-    <p>Mechanical Design & BIM Engineer</p>
-    <p>Riyadh, Saudi Arabia</p>
+<div class="container" id="page">
+  <header class="header">
+    <div class="hero">
+      <div class="avatar"><img src="profile.jpg" alt="Profile"></div>
+      <div class="title">
+        <h1 id="name">Bahaa Mohamed Sarhan</h1>
+        <p id="title" class="lead">Mechanical Design & BIM Engineer</p>
+        <p id="loc" style="color:var(--muted);margin:6px 0 0">Riyadh, Saudi Arabia</p>
+      </div>
+    </div>
+    <div class="top-right">
+      <select id="lang" class="lang-toggle">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+      </select>
+      <div class="buttons">
+        <a class="btn" href="cv.pdf" target="_blank">View CV</a>
+        <a class="btn" href="royal-central-kitchen.html">View Project</a>
+      </div>
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      Mechanical Engineer specialized in HVAC, Firefighting, and Plumbing systems with expertise in BIM coordination and detailed modeling. Focused on delivering accurate, efficient designs using Revit, AutoCAD, and Navisworks.
-    </p>
+  <section id="about" class="section">
+    <h2 id="aboutTitle">About</h2>
+    <p id="aboutText">Mechanical Engineer specialized in MEP design with over 3 years of experience in designing, installing, and maintaining HVAC, fire fighting, and plumbing systems. Experienced in BIM coordination, modeling (LOD 300–500), clash detection and Revit family creation. Passionate about efficient, buildable engineering solutions using modern BIM workflows.</p>
   </section>
 
-  <section>
-    <h2>Technical Skills</h2>
-    <div class="skills">
-      <span>HVAC Systems Design & Analysis</span>
-      <span>Firefighting & Plumbing Systems</span>
-      <span>BIM Coordination (Revit, Navisworks)</span>
-      <span>AutoCAD</span>
-      <span>Revit MEP</span>
-      <span>Clash Detection</span>
-      <span>ESP & Duct Sizing</span>
-      <span>Shop Drawings</span>
-    </div>
+  <section id="skills" class="section">
+    <h2 id="skillsTitle">Skills</h2>
+    <div class="skills" id="skillsList"></div>
   </section>
 
-  <section>
-    <h2>Projects</h2>
-    <div class="project">
-      <img src="hvac-3d-1.png" alt="Royal Central Kitchen 3D" />
-      <div class="project-info">
-        <h3>Royal Central Kitchen — Al Zahir Palace</h3>
-        <p>HVAC Design, Coordination & As-Built Documentation.</p>
-        <a href="royal-central-kitchen.html">View Project Details</a>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="project-info">
-        <h3>King Faisal Specialist Hospital — Riyadh</h3>
-        <p>Firefighting and HVAC system coordination and design.</p>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="project-info">
-        <h3>Al Ula Museum Extension</h3>
-        <p>HVAC and plumbing BIM modeling and documentation.</p>
-      </div>
-    </div>
+  <section id="projects" class="section">
+    <h2 id="projectsTitle">Projects</h2>
+    <div class="projects-grid" id="projectsGrid"></div>
   </section>
 
-  <section>
-    <h2>Certificates</h2>
-    <ul>
-      <li>Autodesk Certified Professional: Revit MEP Mechanical</li>
-      <li>HVAC Design and Drafting Diploma</li>
-      <li>Bachelor’s Degree in Mechanical Engineering</li>
-    </ul>
+  <section id="certs" class="section">
+    <h2 id="certsTitle">Certificates</h2>
+    <p id="certsText">MEP-BIM Diploma — Kaitech Academy (includes Revit, Clash Detection, Navisworks, BIM 4D/5D/6D/7D, Dynamo, BIM Management).</p>
   </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:bahaamohamed041@gmail.com">bahaamohamed041@gmail.com</a></p>
+  <section id="contact" class="section">
+    <h2 id="contactTitle">Contact</h2>
+    <p id="contactText">Email: <a href="mailto:Bahaamohamed041@gmail.com">Bahaamohamed041@gmail.com</a> • Phone: +966546244504 • LinkedIn: <a href="https://www.linkedin.com/in/bahaa-mohammed/" target="_blank">Profile</a></p>
   </section>
 
-  <footer>
-    © 2025 Bahaa Mohammed — All Rights Reserved
+  <footer class="footer">
+    © Bahaa Mohamed Sarhan — Riyadh, Saudi Arabia
   </footer>
+</div>
+
+<script>
+const content = {
+  en: {
+    name: `Bahaa Mohamed Sarhan`,
+    title: `Mechanical Design & BIM Engineer`,
+    aboutTitle: "About",
+    aboutText: `Mechanical Engineer specialized in MEP design with over 3 years of experience in designing, installing, and maintaining HVAC, fire fighting, and plumbing systems.`,
+    skills: ["HVAC Design", "Fire Fighting Systems", "BIM Coordination", "Clash Detection", "Revit Families", "Shop Drawings"],
+    projects: [{"name_en": "Royal Central Kitchen – Al Zahir Palace", "location": "Jeddah, Saudi Arabia", "role": "BIM & Design Engineer", "scope": "HVAC, Firefighting & Plumbing modeling and coordination"}]
+  }
+};
+
+function render(lang){
+  const d = content[lang];
+  document.getElementById('name').textContent = d.name;
+  document.getElementById('title').textContent = d.title;
+  document.getElementById('aboutTitle').textContent = d.aboutTitle;
+  document.getElementById('aboutText').textContent = d.aboutText;
+  const skillsList = document.getElementById('skillsList');
+  skillsList.innerHTML = '';
+  d.skills.forEach(s=>{
+    const el=document.createElement('div');
+    el.className='skill';
+    el.textContent=s;
+    skillsList.appendChild(el);
+  });
+}
+render('en');
+</script>
 </body>
 </html>
